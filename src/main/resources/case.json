@@ -1,0 +1,19 @@
+{
+  "request": {
+    "method": "post",
+    "headers": {},
+    "params": {
+      "username": "caiwen",
+      "password": "123456"
+    },
+    "cookies": {
+    },
+    "proxy": ""
+  },
+  "response": {
+    "statusCode":200,
+    "headers":{},
+    "cookies":{},
+    "body":""
+  }
+}
