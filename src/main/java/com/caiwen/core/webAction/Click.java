@@ -5,15 +5,12 @@ import org.openqa.selenium.WebDriver;
 
 public class Click extends AbstractWebAction {
 
-    private By by;
+  public Click(WebDriver driver, String... arguments) {
+    super(driver, arguments);
+  }
 
-    public Click(WebDriver driver, By by) {
-        super(driver);
-        this.by = by;
-    }
-
-    @Override
-    public void perform() {
-        driver.findElement(by).click();
-    }
+  @Override
+  public void perform() {
+    driver.findElement(buildBy(arguments[0], arguments[1])).click();
+  }
 }

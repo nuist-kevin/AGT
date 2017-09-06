@@ -13,26 +13,21 @@ import java.util.concurrent.Executors;
 
 public class MainTest {
 
-    @Test
-    public void test() {
+  @Test
+  public void test() {
 
-        TestSuite testSuite = new TestSuite();
+    TestSuite testSuite = new TestSuite();
 
-        TestCase testCase = new TestCase();
-
+    TestCase testCase = new TestCase();
 
 //        Action action = new HtmlAction();
 
-        TestNG testNG = new TestNG();
+    TestNG testNG = new TestNG();
+
+    XmlTest xmlTest = new XmlTest();
+
+    XmlSuite xmlSuite = new XmlSuite();
 
 
-        XmlTest xmlTest = new XmlTest();
-
-        XmlSuite xmlSuite = new XmlSuite();
-
-
-
-
-
-    }
+  }
 }

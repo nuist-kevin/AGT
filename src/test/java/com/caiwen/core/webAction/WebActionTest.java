@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.TestRunner;
 import org.testng.annotations.Test;
 
@@ -14,8 +15,8 @@ import java.util.List;
 
 public class WebActionTest {
 
-    @Test
-    public void test() {
+  @Test
+  public void test() {
 /*        System.setProperty("webdriver.chrome.driver", "D:\\webdriver\\chrome\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
@@ -37,12 +38,12 @@ public class WebActionTest {
 
         System.out.println(testCaseRunner.getResult());*/
 
-        System.setProperty("webdriver.chrome.driver", "D:\\webdriver\\chrome\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://login.made-in-china.com");
-        WebElement element = driver.findElement(By.id("logonInfo.logUserName"));
-        element.sendKeys("producttest");
-        System.out.println("hello");
+    System.setProperty("webdriver.chrome.driver", "D:\\webdriver\\chrome\\chromedriver.exe");
+    WebDriver driver = new ChromeDriver();
+    driver.get("https://login.made-in-china.com");
+    WebElement element = driver.findElement(By.id("logonInfo.logUserName"));
+    element.sendKeys("producttest");
+    System.out.println("hello");
 
-    }
+  }
 }

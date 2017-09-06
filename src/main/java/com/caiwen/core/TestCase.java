@@ -5,18 +5,17 @@ import java.util.List;
 
 public class TestCase {
 
-    private List<TestStep> testSteps = new ArrayList<>();
+  private List<TestStep> testSteps = new ArrayList<>();
 
+  public void addStep(TestStep testStep) {
+    testSteps.add(testStep);
+  }
 
-    public void addStep(TestStep testStep) {
-        testSteps.add(testStep);
-    }
+  public List<TestStep> getTestSteps() {
+    return testSteps;
+  }
 
-    public List<TestStep> getTestSteps() {
-        return testSteps;
-    }
-
-    public void setTestSteps(List<TestStep> testSteps) {
-        this.testSteps = testSteps;
-    }
+  public void setTestSteps(List<TestStep> testSteps) {
+    this.testSteps = testSteps;
+  }
 }

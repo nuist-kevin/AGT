@@ -1,0 +1,41 @@
+steps:
+  - sequence: 1
+    operation: visit
+    arguments:
+      - https://login.made-in-china.com/
+  - sequence: 3
+    operation: selectByValue
+    arguments:
+      - id
+      - loginUserName
+      - producttest
+  - sequence: 2
+    operation: input
+    arguments:
+      - id
+      - loginPassword
+      - focus1234
+  - sequence: 4
+    operation: execJs
+    arguments:
+      - kjaklsjdflka
+  - sequence: 5
+    operation: selectByValue
+    arguments:
+      - id
+      - locale
+      - english
+  - sequence: 6
+    operation: click
+    arguments:
+      - id
+      - loginSubmit
+expects:
+  - predication: urlIs
+    arguments:
+      - http://membercenter.made-in-china.com/
+  - predication: textIs
+    arguments:
+      - id
+      - loginSubmit
+      - focuschina

@@ -1,5 +1,5 @@
 package com.caiwen.core;
 
-public interface TestStep extends Runnable{
+public interface TestStep extends Runnable {
 
 }

@@ -1,5 +1,6 @@
 name: 登录页
 url: https://login.made-in-china.com/
+title:
 pageElements:
   - name: 用户名输入框
     findBy: id
@@ -10,3 +11,4 @@ pageElements:
   - name: 提交按钮
     findBy: id
     value: sign-in-submit
+

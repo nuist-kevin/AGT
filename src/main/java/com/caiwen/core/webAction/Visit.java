@@ -7,16 +7,12 @@ import org.openqa.selenium.WebDriver;
  */
 public class Visit extends AbstractWebAction {
 
-    private String url;
+  public Visit(WebDriver driver, String... arguments) {
+    super(driver, arguments);
+  }
 
-    public Visit(WebDriver driver, String url) {
-        super(driver);
-        this.url = url;
-    }
-
-
-    @Override
-    public void perform() {
-        this.driver.get(this.url);
-    }
+  @Override
+  public void perform() {
+    driver.get(arguments[0]);
+  }
 }

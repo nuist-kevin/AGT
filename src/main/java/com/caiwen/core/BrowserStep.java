@@ -6,35 +6,34 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BrowserStep implements TestStep {
 
-    private AbstractWebAction webAction;
+  private AbstractWebAction webAction;
 
-    public BrowserStep(AbstractWebAction webAction) {
-        this.webAction = webAction;
+  public BrowserStep(AbstractWebAction webAction) {
+    this.webAction = webAction;
+  }
+
+  public AbstractWebAction getWebAction() {
+    return webAction;
+  }
+
+  public void setWebAction(AbstractWebAction webAction) {
+    this.webAction = webAction;
+  }
+
+  public void run() {
+    try {
+      webAction.perform();
+
+    } catch (Exception e) {
+      e.printStackTrace();
     }
-
-    public AbstractWebAction getWebAction() {
-        return webAction;
-    }
-
-    public void setWebAction(AbstractWebAction webAction) {
-        this.webAction = webAction;
-    }
-
-    public void run() {
-        try {
-            webAction.perform();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+  }
 
 
-
-    public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "D:\\webdriver\\chrome\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
-        try {
+  public static void main(String[] args) {
+    System.setProperty("webdriver.chrome.driver", "D:\\webdriver\\chrome\\chromedriver.exe");
+    WebDriver driver = new ChromeDriver();
+    try {
 /*            driver.get("https://login.made-in-china.com");
             WebElement username = driver.findElement(By.id("logonInfo.logUserName"));
             username.sendKeys("producttest");
@@ -62,19 +61,15 @@ public class BrowserStep implements TestStep {
 //
 //            testStep.execute();
 
-
-
 //            TestStep testStep = new BrowserStep(elementLocator, action);
 //            testCase.addStep(testStep);
 
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            driver.quit();
-        }
-
-
+    } catch (Exception e) {
+      e.printStackTrace();
+    } finally {
+      driver.quit();
     }
+
+
+  }
 }

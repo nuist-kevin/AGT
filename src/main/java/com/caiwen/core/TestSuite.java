@@ -5,17 +5,17 @@ import java.util.List;
 
 public class TestSuite {
 
-    private List<TestCase> testCases = new ArrayList<>();
+  private List<TestCase> testCases = new ArrayList<>();
 
-    public List<TestCase> getTestCases() {
-        return testCases;
-    }
+  public List<TestCase> getTestCases() {
+    return testCases;
+  }
 
-    public void setTestCases(List<TestCase> testCases) {
-        this.testCases = testCases;
-    }
+  public void setTestCases(List<TestCase> testCases) {
+    this.testCases = testCases;
+  }
 
-    public void addTestCase(TestCase testCase) {
-        this.getTestCases().add(testCase);
-    }
+  public void addTestCase(TestCase testCase) {
+    this.getTestCases().add(testCase);
+  }
 }
